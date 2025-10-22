@@ -1,6 +1,6 @@
 # Privacy Policy for FocusTube
 
-**Last Updated:** June 19, 2025
+**Last Updated:** October 22, 2025
 
 This Privacy Policy describes how the FocusTube browser extension ("the extension," "we," "us," or "our") handles your data. 
 
