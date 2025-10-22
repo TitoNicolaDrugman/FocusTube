@@ -1,14 +1,14 @@
-# Privacy Policy for CleanTube
+# Privacy Policy for FocusTube
 
 **Last Updated:** June 19, 2025
 
-This Privacy Policy describes how the CleanTube browser extension ("the extension," "we," "us," or "our") handles your data. 
+This Privacy Policy describes how the FocusTube browser extension ("the extension," "we," "us," or "our") handles your data. 
 
 This extension is designed to operate entirely on your local device.
 
 ## 1. Data We Handle and Why
 
-According to the Chrome Web Store's User Data Policy, CleanTube handles the following types of data:
+According to the Chrome Web Store's User Data Policy, FocusTube handles the following types of data:
 
 *   **User Activity:**
     *   **Watch Time Data:** The extension tracks the time you spend actively watching videos on YouTube. This data is aggregated and stored **exclusively on your local computer** using the `chrome.storage.local` API. This information is used for the sole purpose of displaying daily and weekly watch-time charts on the extension's Settings page for your personal review.
@@ -22,7 +22,7 @@ According to the Chrome Web Store's User Data Policy, CleanTube handles the foll
 
 ## 2. Permissions Justification
 
-CleanTube requests the minimum permissions necessary to function:
+FocusTube requests the minimum permissions necessary to function:
 
 *   **`storage`:** This permission is required to save your settings and watch-time data on your local device, as described in Section 1. This allows the extension to persist your preferences and statistics between browsing sessions.
 *   **`tabs`:** This permission is used to identify and close YouTube tabs when a Focus Hour period begins or when a Session Timer expires. It is also used to check a tab's URL to apply blocking rules and to inject the Cooldown Challenge on the correct page.
@@ -33,7 +33,7 @@ CleanTube requests the minimum permissions necessary to function:
 Our use of your data complies with the Chrome Web Store's Limited Use requirements:
 
 *   **Allowed Use:** Data is only used to provide and improve the direct, user-facing features of the extension (hiding distractions, providing statistics, and managing sessions).
-*   **Allowed Transfer:** No data is transferred, as it is all stored locally. The only exception would be as part of a merger or acquisition, or if required by law.
+*   **Allowed Transfer:** No data is transferred, as it is all stored locally.
 *   **Prohibited Advertising:** We **never** use or transfer your data for serving personalized advertisements.
 *   **Prohibited Human Interaction:** We do not have access to read any of your data, as it is not transmitted to us.
 
@@ -55,4 +55,4 @@ We may update our Privacy Policy from time to time. We will notify you of any ch
 
 ## 8. Contact Us
 
-If you have any questions about this Privacy Policy, you can contact us by opening an issue on our [GitHub repository](https://github.com/TitoNicolaDrugman/CleanTube).
+If you have any questions about this Privacy Policy, you can contact us by opening an issue on our [GitHub repository](https://github.com/TitoNicolaDrugman/FocusTube).
