@@ -1,0 +1,30 @@
+{
+  "name": "FocusTube",
+  "description": "A focused, distraction-free YouTube. With timers, focus hours and time tracking.",
+  "version": "0.4.2",
+  "manifest_version": 3,
+  "icons": {
+    "16": "icons/logo_v4_16.png",
+    "48": "icons/logo_v4_48.png",
+    "128": "icons/logo_v4_128.png"
+  },
+  "content_scripts": [
+    {
+      "matches": ["https://www.youtube.com/*"],
+      "js": ["content.js"],
+      "run_at": "document_end"
+    }
+  ],
+  "permissions": ["storage", "tabs", "alarms"],
+  "action": {
+    "default_title": "FocusTube",
+    "default_popup": "popup.html"
+  },
+  "background": {
+    "service_worker": "background.js"
+  },
+  "options_ui": {
+    "page": "options.html",
+    "open_in_tab": true
+  }
+}

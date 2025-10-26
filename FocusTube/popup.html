@@ -1,0 +1,155 @@
+ <!doctype html>
+ <html lang="en">
+ <head>
+   <meta charset="utf-8">
+   <title>FocusTube</title>
+   <style>
+    :root {
+      --bg-color: #282c34;
+      --text-color: #abb2bf;
+      --text-bright: #e0e6f0;
+      --header-color: #ffffff;
+      --accent-color: #61afef; 
+      --accent-color-hover: #529bdf;
+      --secondary-bg: #3a4049;
+      --border-color: #4a505c;
+      --val-color: #98c379; 
+    }
+    html {
+        border-radius: 8px; 
+    }
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+      min-width: 250px;
+      padding: 16px;
+      background-color: var(--bg-color);
+      color: var(--text-color);
+      margin: 0;
+      border-radius: 8px;
+    }
+    h1 {
+      font-size: 1.1rem;
+      margin: 0 0 12px;
+      color: var(--header-color);
+      font-weight: 500;
+      text-align: center;
+    }
+    h2 {
+      font-size: 1rem;
+      margin: 20px 0 10px;
+      border-top: 1px solid var(--border-color);
+      padding-top: 16px;
+      color: var(--header-color);
+      font-weight: 500;
+    }
+    h2.stats-title {
+      border-top: none;
+      padding-top: 0;
+      margin: 0 0 10px;
+    }
+    #stats {
+      background-color: var(--secondary-bg);
+      padding: 12px;
+      border-radius: 6px;
+      font-size: 0.9rem;
+    }
+    #stats div {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 4px 0;
+    }
+    .val { 
+      font-weight: 700; 
+      color: var(--accent-color); 
+      display: inline-block;
+      min-width: 2.5em;
+      text-align: right;
+      margin-right: 0.3em;
+    }
+    button {
+      width: 100%;
+      padding: 10px;
+      cursor: pointer;
+      border-radius: 6px;
+      border: none;
+      font-size: 0.9rem;
+      font-weight: 600;
+      transition: background-color 0.2s ease, transform 0.1s ease;
+    }
+    button:active {
+      transform: scale(0.98);
+    }
+    #start-timer {
+      background-color: var(--accent-color);
+      color: white;
+      margin-top: 8px;
+    }
+    #start-timer:hover { background-color: var(--accent-color-hover); }
+    #openSettings { background-color: var(--secondary-bg); color: var(--text-bright); }
+    #openSettings:hover { background-color: #4b525e; }
+    hr {
+      border: none;
+      border-top: 1px solid var(--border-color);
+      margin: 16px 0;
+    }
+     #timer-controls input {
+       box-sizing: border-box;
+       width: 100%;
+      padding: 10px;
+      margin-bottom: 8px;
+      border-radius: 6px;
+      border: 1px solid var(--border-color);
+      background-color: var(--secondary-bg);
+      color: var(--text-color);
+      font-size: 0.9rem;
+    }
+    #timer-controls input::placeholder { color: #7f8a9a; }
+    #timer-controls input:focus {
+      outline: none;
+      border-color: var(--accent-color);
+      box-shadow: 0 0 0 2px rgba(97, 175, 239, 0.3);
+     }
+     #timer-display {
+      text-align: center;
+      padding: 12px;
+      background-color: var(--secondary-bg);
+      border-radius: 6px;
+      margin-top: 8px;
+      border: 1px solid var(--accent-color);
+     }
+    #timer-display p { margin: 0 0 5px; color: var(--text-bright); }
+    #timer-display #countdown { font-size: 1.8rem; font-weight: 700; color: var(--accent-color); }
+    #timer-display small { font-size: 0.8rem; color: var(--text-color); }
+   </style>
+ </head>
+ <body>
+
+  <h1>FocusTube</h1>
+  <hr>
+
+  <h2 class="stats-title">Watch Time</h2>
+  <div id="stats">
+    <div><span>Today:</span> <span><span class="val" id="today">-</span>min</span></div>
+    <div><span>Weekly avg:</span> <span><span class="val" id="weekly">-</span>min</span></div>
+  </div>
+ 
+   <!-- Timer Section -->
+   <h2>Session Timer</h2>
+   <div id="timer-controls">
+    <input type="number" id="timer-minutes" min="1" placeholder="Set duration (minutes)">
+     <button id="start-timer">Start Unstoppable Timer</button>
+   </div>
+   <div id="timer-display" style="display: none;">
+     <p>Time Remaining</p>
+     <div id="countdown">00:00</div>
+     <small>All YouTube tabs will close when the timer ends.</small>
+   </div>
+
+  <hr>
+  <button id="openSettings">Settings & Watch-time Stats</button>
+ 
+    <script type="module" src="theme.js"></script>
+    <script type="module" src="popup.js"></script>
+ </body>
+ </html>
